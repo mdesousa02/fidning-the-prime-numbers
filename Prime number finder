@@ -1,0 +1,19 @@
+
+    public static void main(String[] args) {
+        for (int num = 2; num < 1000; num++) {
+          // if the number turns out to be prime it means its true which will then print "Is prime" but if its not prime  "Not prime"
+            boolean isPrime = true;
+            // This is what we wil be dividing by and making div the divisor
+            for (int div = 2; div * div <= 49; div++)
+                // checking if the reminder is 0 and if its not prime it will print Not prime and break out of the loop
+                if (num % div == 0) {
+                    isPrime = false;
+                    break;
+                }
+            if (isPrime) {
+                System.out.println(num);
+            }
+        }
+
+    }
+}
